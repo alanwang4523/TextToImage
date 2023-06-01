@@ -12,3 +12,14 @@ Mac、Windows、Linux 电脑都可以，只要安装配置好 python 环境(3.x 
 5、将要生成图片的小说内容（可以是改文后的）保存到一个 txt 文件，如 /User/AlanWang4523/TextToImage/test/story_1.txt
 6、执行命令行：python create_img_for_story.py <小说文本路径>
 	python create_img_for_story.py C:\Users\Administrator\Desktop\小说图文生成脚本\test\story_1.txt
+
+三、效果截图
+<div align="left">
+<img src=./Screenshots/image_out_log.png width=30% />
+</div>
+<div align="left">
+<img src=./Screenshots/image_out_list.png width=30% />
+</div>
+<div align="left">
+<img src=./Screenshots/img_1.png width=30% />
+</div>
