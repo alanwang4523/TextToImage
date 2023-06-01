@@ -61,7 +61,9 @@ def create_image_with_text(i, text, out_path):
 
     # 在图像上绘制文本
     for line in lines:
-        # width, _ = draw.textsize(line, font=font)
+        if line.strip() == '':
+            y += line_height
+            continue
         while line:
             chars_to_draw = line[:max_chars_per_line]
             line = line[max_chars_per_line:]
@@ -82,8 +84,7 @@ def create_image_with_text(i, text, out_path):
     image.save(out_path)
 
 
-def handle_text(input_text_file: str, output_dir: str):
-    # all_lines = []
+def handle_text(input_text_file, output_dir):
     # 打开要处理的文件
 	with open(input_text_file, 'r', encoding='utf-8') as input_file:
         # 读取所有行
@@ -103,7 +104,6 @@ def handle_text(input_text_file: str, output_dir: str):
 		max_height = HEIGHT - VERTICAL_MATGIN
 		# 根据设置的参数分段分屏
 		for line in all_lines:
-			# width, _ = draw.textsize(line, font=font)
 			while line:
 				chars_to_draw = line[:max_chars_per_line]
 				line = line[max_chars_per_line:]
